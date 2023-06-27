@@ -10,7 +10,7 @@ const path = require("path");
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/fruitDB");
+  await mongoose.connect(process.env.MONGO_URL);
   console.log("fruit database connected");
 }
 
